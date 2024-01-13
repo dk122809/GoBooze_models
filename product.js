@@ -9,6 +9,11 @@ const productSchema = new mongoose.Schema(
       ref: "Product",
       required: true,
     },
+    store_id: {
+      type: ObjectId,
+      ref: "Store",
+      required: true,
+    },
     collection: {
       type: ObjectId,
       ref: "Collection",
