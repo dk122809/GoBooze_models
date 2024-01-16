@@ -24,6 +24,11 @@ const productSchema = new mongoose.Schema(
       ref: "SubCollection",
       required: false,
     },
+    product_images: {
+      type: [ObjectId],
+      ref: "ProductImage",
+      required: false,
+    },
 
     price: {
       type: Number,
