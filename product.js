@@ -9,11 +9,6 @@ const productSchema = new mongoose.Schema(
       ref: "Product",
       required: true,
     },
-    store_id: {
-      type: ObjectId,
-      ref: "Store",
-      required: true,
-    },
     collection: {
       type: ObjectId,
       ref: "Collection",
@@ -69,6 +64,16 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: false,
       default: 0,
+    },
+    added_by: {
+      type: ObjectId,
+      ref: "Admin",
+      required: true,
+    },
+    updated_by: {
+      type: ObjectId,
+      ref: "Admin",
+      required: true,
     },
 
     status: {
