@@ -4,7 +4,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const subCollectionSchema = new mongoose.Schema(
   {
-    collection_name: {
+    collection_id: {
       type: ObjectId,
       ref: "Collection",
       required: true,
