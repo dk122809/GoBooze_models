@@ -12,6 +12,7 @@ const searchHistoryModel = require("./search_history");
 const storeModel = require("./store");
 const userModel = require("./user");
 const productImageModel = require("./product_image");
+const stockModel = require("./stock");
 
 module.exports = {
   addressModel,
@@ -27,5 +28,6 @@ module.exports = {
   searchHistoryModel,
   storeModel,
   userModel,
-  productImageModel
+  productImageModel,
+  stockModel
 };
