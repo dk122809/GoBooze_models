@@ -25,12 +25,12 @@ const inventorySchema = new mongoose.Schema(
     },
     added_by: {
       type: ObjectId,
-      ref: "User",
+      ref: "Admin",
       required: true,
     },
     updated_by: {
       type: ObjectId,
-      ref: "User",
+      ref: "Admin",
       required: false,
     },
     status: {
