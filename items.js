@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
-const productSchema = new mongoose.Schema(
+const itemSchema = new mongoose.Schema(
   {
-    product_name: {
+    item_name: {
       type: String,
+      ref: "Product",
       required: true,
     },
     collection: {
@@ -13,19 +14,14 @@ const productSchema = new mongoose.Schema(
       ref: "Collection",
       required: true,
     },
-    item_id: {
-      type: ObjectId,
-      ref: "Item",
-      required: true,
-    },
     sub_collection: {
       type: ObjectId,
       ref: "SubCollection",
       required: false,
     },
-    product_images: {
+    item_images: {
       type: [ObjectId],
-      ref: "ProductImage",
+      ref: "ItemImage",
       required: false,
     },
 
@@ -34,37 +30,6 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     discount: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-
-    average_rating: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    number_of_ratings: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    number_of_reviews: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    number_of_times_ordered: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    in_favourites: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    in_customer_cart: {
       type: Number,
       required: false,
       default: 0,
@@ -92,4 +57,4 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Product", productSchema, "products");
+module.exports = mongoose.model("Item", itemSchema, "items");
