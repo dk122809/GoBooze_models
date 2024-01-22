@@ -41,9 +41,8 @@ const itemSchema = new mongoose.Schema(
     updated_by: {
       type: ObjectId,
       ref: "Admin",
-      required: true,
+      required: false,
     },
-
     status: {
       type: String,
       enum: ["active", "inactive"],
