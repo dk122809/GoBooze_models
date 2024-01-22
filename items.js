@@ -20,8 +20,7 @@ const itemSchema = new mongoose.Schema(
       required: false,
     },
     item_images: {
-      type: [ObjectId],
-      ref: "ItemImage",
+      type: [String],
       required: false,
     },
 
