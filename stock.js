@@ -10,9 +10,9 @@ const inventorySchema = new mongoose.Schema(
       required: true,
     },
 
-    product_id: {
+    item_id: {
       type: ObjectId,
-      ref: "Product",
+      ref: "Item",
       required: true,
     },
     quantity: {
@@ -51,4 +51,4 @@ const inventorySchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Inventory", inventorySchema, "inventory");
+module.exports = mongoose.model("Stock", inventorySchema, "stocks");
