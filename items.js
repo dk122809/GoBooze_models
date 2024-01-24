@@ -11,7 +11,7 @@ const itemSchema = new mongoose.Schema(
     },
     collection: {
       type: ObjectId,
-      ref: "Collection",
+      ref: "Category",
       required: true,
     },
     sub_collection: {
@@ -51,6 +51,7 @@ const itemSchema = new mongoose.Schema(
     },
   },
   {
+    suppressReservedKeysWarning: true,
     timestamps: true,
   }
 );
