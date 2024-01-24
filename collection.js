@@ -33,4 +33,4 @@ const collectionSchema = new mongoose.Schema(
   { suppressReservedKeysWarning: true }
 );
 
-module.exports = mongoose.model("Collection", collectionSchema, "categories");
+module.exports = mongoose.model("Category", collectionSchema, "categories");

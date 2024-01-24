@@ -6,7 +6,7 @@ const subCollectionSchema = new mongoose.Schema(
   {
     collection_id: {
       type: ObjectId,
-      ref: "Collection",
+      ref: "Category",
       required: true,
     },
     sub_collection_name: {
