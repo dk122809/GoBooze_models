@@ -29,8 +29,8 @@ const collectionSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  },
-  { suppressReservedKeysWarning: true }
+    suppressReservedKeysWarning: true
+  }
 );
 
 module.exports = mongoose.model("Category", collectionSchema, "categories");
