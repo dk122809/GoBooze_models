@@ -33,6 +33,7 @@ const subCollectionSchema = new mongoose.Schema(
     },
   },
   {
+    suppressReservedKeysWarning: true,
     timestamps: true,
   }
 );

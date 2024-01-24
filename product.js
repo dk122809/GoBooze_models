@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema(
     },
     collection: {
       type: ObjectId,
-      ref: "Collection",
+      ref: "Category",
       required: true,
     },
     item_id: {
@@ -92,6 +92,7 @@ const productSchema = new mongoose.Schema(
     },
   },
   {
+    suppressReservedKeysWarning: true,
     timestamps: true,
   }
 );
