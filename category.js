@@ -28,8 +28,8 @@ const collectionSchema = new mongoose.Schema(
     },
   },
   {
+    suppressReservedKeysWarning: true,
     timestamps: true,
-    suppressReservedKeysWarning: true
   }
 );
 
