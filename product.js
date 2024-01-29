@@ -8,6 +8,14 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    product_code: {
+      type: String,
+      required: false,
+    },
+    product_description: {
+      type: String,
+      required: false,
+    },
     collection: {
       type: ObjectId,
       ref: "Category",
@@ -23,13 +31,15 @@ const productSchema = new mongoose.Schema(
       ref: "SubCollection",
       required: false,
     },
-    product_images: {
-      type: [ObjectId],
-      ref: "ProductImage",
-      required: false,
+    selling_price: {
+      type: Number,
+      required: true,
     },
-
-    price: {
+    cost_price: {
+      type: Number,
+      required: true,
+    },
+    gross_profit: {
       type: Number,
       required: true,
     },
@@ -73,6 +83,16 @@ const productSchema = new mongoose.Schema(
       required: false,
       default: 0,
     },
+    is_popular: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    tags: {
+      type: [String],
+      required: false,
+    },
+
     added_by: {
       type: ObjectId,
       ref: "Admin",
@@ -81,7 +101,7 @@ const productSchema = new mongoose.Schema(
     updated_by: {
       type: ObjectId,
       ref: "Admin",
-      required: true,
+      required: false,
     },
 
     status: {

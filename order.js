@@ -18,10 +18,10 @@ const orderSchema = new mongoose.Schema(
       ref: "Product",
       required: true,
     },
-    delivery_status: {
+    order_status: {
       type: String,
-      enum: ["pending", "accepted", "rejected", "on-the-way", "delivered"],
-      default: "pending",
+      enum: ["processing", "accepted", "rejected", "on-the-way", "delivered"],
+      default: "processing",
       required: true,
     },
     delivery_user: {
