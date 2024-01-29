@@ -41,7 +41,7 @@ const productSchema = new mongoose.Schema(
     },
     gross_profit: {
       type: Number,
-      required: true,
+      required: false,
     },
     quantity: {
       type: Number,
