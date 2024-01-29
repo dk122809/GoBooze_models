@@ -4,7 +4,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const CartItemSchema = new mongoose.Schema(
   {
-    item: {
+    product_id: {
       type: ObjectId,
       ref: "Product",
       required: true,
