@@ -27,7 +27,24 @@ const adminSchema = new mongoose.Schema(
       type:String,
       required:false
     },
-
+    addedBy:{
+      type: Schema.Types.ObjectId,
+      ref: "User",    
+  },
+  updatedBy:{
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
+  status: {
+    type: String,
+    enum: ["active", "inactive"],
+    default: "active",
+    required: false,
+  },
+  zipCode:{
+    type:String,
+    required:true
+  }
 
 
     // first_name: {
