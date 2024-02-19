@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-const variantSchema = new mongoose.Schema(
+const Schema = mongoose.Schema;
+const variantsModel = new mongoose.Schema(
   {
     variantName: {
       type: String,
@@ -41,12 +41,12 @@ const variantSchema = new mongoose.Schema(
       required: true,
     },
     addedBy: {
-        type: ObjectId,
-        ref: "Admin",
+      type: Schema.Types.ObjectId,
+      ref: "Admin",
         required: false,
       },
       updatedBy: {
-        type: ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Admin",
         required: false,
       },
@@ -57,4 +57,4 @@ const variantSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("variant", variantSchema, "variants");
+module.exports = mongoose.model("variant", variantsModel, "variants");
