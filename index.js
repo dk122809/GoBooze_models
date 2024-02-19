@@ -15,10 +15,12 @@ const userModel = require("./user");
 const productImageModel = require("./product_image");
 const itemImageModel = require("./item_image");
 const stockModel = require("./stock");
+const variantModel=require("./variant")
 
 module.exports = {
   addressModel,
   adminModel,
+  variantModel,
   cartModel,
   collectionModel,
   subCollectionModel,
