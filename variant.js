@@ -40,6 +40,11 @@ const variantsModel = new mongoose.Schema(
       default: "active",
       required: true,
     },
+    products: {
+      type: Schema.Types.ObjectId,
+      ref: "products",
+      required: false,
+    },
     addedBy: {
       type: Schema.Types.ObjectId,
       ref: "Admin",
