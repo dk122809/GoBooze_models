@@ -16,9 +16,11 @@ const productImageModel = require("./product_image");
 const itemImageModel = require("./item_image");
 const stockModel = require("./stock");
 const variantModel=require("./variant")
+const brandModel=require("./brands")
 
 module.exports = {
   addressModel,
+  brandModel,
   adminModel,
   variantModel,
   cartModel,

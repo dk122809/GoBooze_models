@@ -57,7 +57,7 @@ const variantsModel = new mongoose.Schema(
       },
   },
   {
-    suppressReservedKeysWarning: true,
+    // suppressReservedKeysWarning: true,
     timestamps: true,
   }
 );
