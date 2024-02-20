@@ -42,7 +42,7 @@ const variantsModel = new mongoose.Schema(
     },
     products: {
       type: Schema.Types.ObjectId,
-      ref: "products",
+      ref: "product",
       required: false,
     },
     addedBy: {
@@ -62,4 +62,4 @@ const variantsModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("variant", variantsModel, "variants");
+module.exports = mongoose.model("variant", variantsModel);
