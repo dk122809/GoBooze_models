@@ -12,12 +12,12 @@ const productSchema = new mongoose.Schema(
     category: {
         type: ObjectId,
         ref: "category",
-        required: true,
+        required: false,
     },
     subCategory: {
         type: ObjectId,
         ref: "subCategory",
-        required: true
+        required: false
     },
     brand: {
       type: ObjectId,
@@ -27,6 +27,10 @@ const productSchema = new mongoose.Schema(
     tags: {
       type: Array,
       default: [],
+    },
+    description:{
+      type: String,
+      required: true,
     },
     addedBy: {
       type: ObjectId,
