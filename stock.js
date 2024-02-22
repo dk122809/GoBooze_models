@@ -23,6 +23,10 @@ const inventorySchema = new mongoose.Schema(
       type: Number,
       required: 0,
     },
+    minimum_quantity: {
+      type: Number,
+      required: 0,
+    },
     added_by: {
       type: ObjectId,
       ref: "Admin",
@@ -45,6 +49,45 @@ const inventorySchema = new mongoose.Schema(
       default: "in-stock",
       required: true,
     },
+    product_id: {
+      type: ObjectId,
+      ref: "Product",
+      required: true,
+    },
+    category_id: {
+      type: ObjectId,
+      ref: "category",
+      required: false,
+    },
+    subCategory_id: {
+      type: ObjectId,
+      ref: "subCategory",
+      required: false
+    },
+    purchase_price: {
+      type: Number,
+      default: 0,
+    },
+    selling_price: {
+      type: Number,
+      default: 0,
+    },
+    final_selling_price:{
+      type: Number,
+      default: 0,
+    },
+    discount: {
+      type: Number,
+      default: 0,
+    },
+    gst: {
+      type: Number,
+      default: 0,
+    },
+    number_of_products: {
+      type: Number,
+      default:0
+    }
   },
   {
     timestamps: true,
