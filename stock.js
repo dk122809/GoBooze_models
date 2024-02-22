@@ -59,6 +59,7 @@ const inventorySchema = new mongoose.Schema(
       ref: "category",
       required: false,
     },
+    
     subCategory_id: {
       type: ObjectId,
       ref: "subCategory",
