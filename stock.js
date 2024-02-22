@@ -25,7 +25,7 @@ const inventorySchema = new mongoose.Schema(
     },
     minimum_quantity: {
       type: Number,
-      required: 0,
+      required:true
     },
     added_by: {
       type: ObjectId,
@@ -57,21 +57,23 @@ const inventorySchema = new mongoose.Schema(
     category_id: {
       type: ObjectId,
       ref: "category",
-      required: false,
+      required: true,
     },
     
     subCategory_id: {
       type: ObjectId,
       ref: "subCategory",
-      required: false
+      required: true
     },
     purchase_price: {
       type: Number,
       default: 0,
+      required:true
     },
     selling_price: {
       type: Number,
       default: 0,
+      required:true
     },
     final_selling_price:{
       type: Number,
@@ -80,14 +82,17 @@ const inventorySchema = new mongoose.Schema(
     discount: {
       type: Number,
       default: 0,
+      required:true
     },
     gst: {
       type: Number,
       default: 0,
+      required:true
     },
     number_of_products: {
       type: Number,
-      default:0
+      default:0,
+      required:true
     }
   },
   {
