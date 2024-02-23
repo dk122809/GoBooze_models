@@ -17,7 +17,7 @@ const itemImageModel = require("./item_image");
 const stockModel = require("./stock");
 const variantModel=require("./variant")
 const brandModel=require("./brands")
-const customers = require("./customers");
+const customerModal = require("./customers");
 
 module.exports = {
   addressModel,
@@ -39,5 +39,5 @@ module.exports = {
   stockModel,
   itemModel,
   itemImageModel,
-  customers,
+  customerModal,
 };
