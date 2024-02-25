@@ -62,4 +62,4 @@ const variantsModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("variant", variantsModel);
+module.exports = mongoose.model("Variant", variantsModel,"variants");

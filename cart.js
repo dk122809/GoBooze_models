@@ -4,9 +4,9 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const CartItemSchema = new mongoose.Schema(
   {
-    product_id: {
+    variant_id: {
       type: ObjectId,
-      ref: "Product",
+      ref: "Variant",
       required: true,
     },
     user_id: {
