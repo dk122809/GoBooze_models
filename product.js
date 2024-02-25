@@ -45,7 +45,7 @@ const productSchema = new mongoose.Schema(
     variants: [
       {
         type: Schema.Types.ObjectId,
-        ref: "variant",
+        ref: "Variant",
         index: true,
       },
     ],
