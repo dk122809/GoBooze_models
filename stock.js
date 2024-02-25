@@ -9,23 +9,24 @@ const inventorySchema = new mongoose.Schema(
       ref: "Store",
       required: true,
     },
-
-    item_id: {
+    product_id: {
       type: ObjectId,
-      ref: "Item",
+      ref: "Product",
       required: true,
     },
     quantity: {
       type: Number,
-      required: 0,
+      required: false,
     },
     available_quantity: {
       type: Number,
-      required: 0,
+      default: 0,
+      required: false,
     },
     minimum_quantity: {
       type: Number,
-      required:true
+      default: 0,
+      required: false
     },
     added_by: {
       type: ObjectId,
@@ -45,54 +46,50 @@ const inventorySchema = new mongoose.Schema(
     },
     stock_status: {
       type: String,
-      enum: ["in-stock", "out-of-stock","low-stock"],
+      enum: ["in-stock", "out-of-stock", "low-stock"],
       default: "in-stock",
       required: true,
     },
-    product_id: {
-      type: ObjectId,
-      ref: "Product",
-      required: true,
-    },
+
     category_id: {
       type: ObjectId,
       ref: "category",
-      required: true,
+      required: false,
     },
-    
+
     subCategory_id: {
       type: ObjectId,
       ref: "subCategory",
-      required: true
+      required: false
     },
     purchase_price: {
       type: Number,
       default: 0,
-      required:true
+      required: false
     },
     selling_price: {
       type: Number,
       default: 0,
-      required:true
+      required: false
     },
-    final_selling_price:{
+    final_selling_price: {
       type: Number,
       default: 0,
     },
     discount: {
       type: Number,
       default: 0,
-      required:true
+      required: false
     },
     gst: {
       type: Number,
       default: 0,
-      required:true
+      required: false
     },
     number_of_products: {
       type: Number,
-      default:0,
-      required:true
+      default: 0,
+      required: false
     }
   },
   {
