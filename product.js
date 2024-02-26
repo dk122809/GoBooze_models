@@ -45,7 +45,7 @@ const productSchema = new mongoose.Schema(
     variants: [
       {
         type: Schema.Types.ObjectId,
-        ref: "variant",
+        ref: "Variant",
         index: true,
       },
     ],
@@ -169,4 +169,4 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("product", productSchema);
+module.exports = mongoose.model("Product", productSchema,"products");
