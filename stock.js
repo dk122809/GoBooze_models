@@ -9,41 +9,55 @@ const inventorySchema = new mongoose.Schema(
       ref: "Store",
       required: true,
     },
-
-    item_id: {
+    product_id: {
       type: ObjectId,
-      ref: "Item",
+      ref: "Product",
       required: true,
+    },
+    category_id: {
+      type: ObjectId,
+      ref: "category",
+      required: true,
+    },
+    subCategory_id: {
+      type: ObjectId,
+      ref: "subCategory",
+      required: true
+    },
+    purchase_price: {
+      type: Number,
+      default: 0,
+      required:true
+    },
+    selling_price: {
+      type: Number,
+      default: 0,
+      required:true
+    },
+    final_selling_price:{
+      type: Number,
+      default: 0,
+      required:false
+    },
+    gst: {
+      type: Number,
+      default: 0,
+      required:true
+    },
+    number_of_products: {
+      type: Number,
+      default:0,
+      required:true
+    },
+    discount: {
+      type: Number,
+      default: 0,
+      required:true
     },
     quantity: {
       type: Number,
-      required: 0,
-    },
-    available_quantity: {
-      type: Number,
-      required: 0,
-    },
-    added_by: {
-      type: ObjectId,
-      ref: "Admin",
-      required: true,
-    },
-    updated_by: {
-      type: ObjectId,
-      ref: "Admin",
-      required: false,
-    },
-    status: {
-      type: String,
-      enum: ["active", "inactive"],
-      default: "active",
-      required: true,
-    },
-    stock_status: {
-      type: String,
-      enum: ["in-stock", "out-of-stock","low-stock"],
-      default: "in-stock",
-      required: true,
+      default: 0,
+      required:false
     },
   },
   {
