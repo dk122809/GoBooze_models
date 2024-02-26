@@ -37,7 +37,6 @@ const inventorySchema = new mongoose.Schema(
     final_selling_price:{
       type: Number,
       default: 0,
-      required:false
     },
     gst: {
       type: Number,
@@ -46,34 +45,18 @@ const inventorySchema = new mongoose.Schema(
     },
     number_of_products: {
       type: Number,
-      required: 0,
+      default:0,
+      required:true
     },
     discount: {
       type: Number,
-      required: 0,
+      default: 0,
+      required:true
     },
     quantity: {
       type: Number,
       default: 0,
       required:false
-    },
-
-    category_id: {
-      type: ObjectId,
-      ref: "category",
-      required: false,
-    },
-    status: {
-      type: String,
-      enum: ["active", "inactive"],
-      default: "active",
-      required: true,
-    },
-    stock_status: {
-      type: String,
-      enum: ["in-stock", "out-of-stock","low-stock"],
-      default: "in-stock",
-      required: true,
     },
   },
   {
