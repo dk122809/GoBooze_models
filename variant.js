@@ -42,7 +42,12 @@ const variantsModel = new mongoose.Schema(
     },
     products: {
       type: Schema.Types.ObjectId,
-      ref: "Product",
+      ref: "product",
+      required: false,
+    },
+    isTopSellingProduct: {
+      type: Boolean,
+      default: false,
       required: false,
     },
     addedBy: {

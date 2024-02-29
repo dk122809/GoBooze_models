@@ -42,10 +42,14 @@ const adminSchema = new mongoose.Schema(
     default: "active",
     required: false,
   },
-  zipCode:{
-    type:String,
-    required:true
-  }
+  // zipCode:{
+  //   type:String,
+  //   required:true
+  // },
+  zipCode: {
+    type: Array,
+    default: [],
+  },
 
 
     // first_name: {
