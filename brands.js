@@ -13,6 +13,7 @@ const brandSchema = new mongoose.Schema(
         type:String,
         required:false
     },
+    
     brandImage: {
         type:String,
         required:false
