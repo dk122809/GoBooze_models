@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-
+const ObjectId = mongoose.Schema.Types.ObjectId;
 const addressSchema = new mongoose.Schema(
   {
+    user_id: { type: ObjectId, required: true },
     addressFullName: { type: String, required: true },
-
     addressPhoneNumber: { type: String, required: true },
     locality: { type: String, required: false },
     country: { type: String, required: true },
