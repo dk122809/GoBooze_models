@@ -5,7 +5,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const orderSchema = new mongoose.Schema(
   {
     user_id: {
-      type: [ObjectId],
+      type: ObjectId,
       ref: "User",
       required: true,
     },
@@ -13,20 +13,11 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    items: {
-      type: [ObjectId],
-      ref: "Product",
-      required: true,
-    },
     order_status: {
       type: String,
       enum: ["processing", "accepted", "rejected", "on-the-way", "delivered"],
       default: "processing",
       required: true,
-    },
-    delivery_user: {
-      type: [ObjectId],
-      required: false,
     },
     delivery_time: {
       type: String,
@@ -48,6 +39,7 @@ const orderSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    tax: {},
     discount_value: {
       type: Number,
       required: false,
