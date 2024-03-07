@@ -17,7 +17,15 @@ const OrderStatusSchema = new mongoose.Schema(
     delivery_status: {
       type: String,
       required: true,
-      enum: ["pending", "accepted", "rejected", "delivered", "reached","on-the-way"],
+      enum: [
+        "pending",
+        "accepted",
+        "rejected",
+        "delivered",
+        "reached",
+        "on-the-way",
+        "cancelled",
+      ],
       default: "pending",
     },
     location: {
