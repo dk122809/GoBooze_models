@@ -41,7 +41,7 @@ const OrderStatusSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model(
-  "OrderProduct",
+  "OrderDelivery",
   OrderStatusSchema,
-  "order_products"
+  "order_deliveries"
 );

@@ -20,7 +20,7 @@ const OrderStatusSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model(
-  "OrderProduct",
+  "OrderStatus",
   OrderStatusSchema,
-  "order_products"
+  "order_status"
 );
