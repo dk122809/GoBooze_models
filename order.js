@@ -53,7 +53,7 @@ const orderSchema = new mongoose.Schema(
     payment_method: {
       type: ObjectId,
       ref: "PaymentMethod",
-      required: true,
+      required: false,
     },
 
     status: {
