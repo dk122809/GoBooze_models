@@ -11,13 +11,15 @@ const itemModel = require("./items");
 const reviewModel = require("./review");
 const searchHistoryModel = require("./search_history");
 const storeModel = require("./store");
-const userModel = require("./user");
 const productImageModel = require("./product_image");
 const itemImageModel = require("./item_image");
 const stockModel = require("./stock");
 const variantModel=require("./variant")
 const brandModel=require("./brands")
 const customerModal = require("./customers");
+const orderDelivery = require("./order_delivery");
+const orderProducts = require("./order_products");
+const orderStatus = require("./order_status");
 
 module.exports = {
   addressModel,
@@ -34,10 +36,13 @@ module.exports = {
   reviewModel,
   searchHistoryModel,
   storeModel,
-  userModel,
   productImageModel,
   stockModel,
   itemModel,
   itemImageModel,
   customerModal,
+  orderStatus,
+  orderDelivery,
+  orderProducts
+
 };
