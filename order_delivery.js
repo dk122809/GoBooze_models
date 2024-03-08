@@ -38,6 +38,19 @@ const OrderStatusSchema = new mongoose.Schema(
         required: false,
       },
     },
+    delivery_rating: {
+      type: Number,
+      required: false,
+    },
+    delivery_review: {
+      type: String,
+      required: false,
+    },
+    review_by: {
+      type: ObjectId,
+      required: false,
+      ref: "User",
+    },
     status: {
       type: String,
       required: true,

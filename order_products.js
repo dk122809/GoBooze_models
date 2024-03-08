@@ -36,9 +36,18 @@ const OrderProductsSchema = new mongoose.Schema(
       type: Date,
       required: false,
     },
-    rating: {
+    product_rating: {
       type: Number,
       required: false,
+    },
+    product_review: {
+      type: String,
+      required: false,
+    },
+    review_by: {
+      type: ObjectId,
+      required: false,
+      ref: "User",
     },
     status: {
       type: String,

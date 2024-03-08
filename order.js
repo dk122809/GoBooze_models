@@ -68,6 +68,32 @@ const orderSchema = new mongoose.Schema(
       ref: "PaymentMethod",
       required: false,
     },
+    order_rating: {
+      type: Number,
+      required: false,
+    },
+    order_review: {
+      type: String,
+      required: false,
+    },
+
+    go_booze_rating: {
+      type: Number,
+      required: false,
+    },
+    go_booze_review: {
+      type: String,
+      required: false,
+    },
+    comments: {
+      type: String,
+      required: false,
+    },
+    discard_from: {
+      type: ObjectId,
+      ref: "Store",
+      required: false,
+    },
 
     status: {
       type: String,
