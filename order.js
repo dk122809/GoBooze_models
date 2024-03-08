@@ -77,11 +77,11 @@ const orderSchema = new mongoose.Schema(
       required: false,
     },
 
-    go_booze_rating: {
+    gobooze_rating: {
       type: Number,
       required: false,
     },
-    go_booze_review: {
+    gobooze_review: {
       type: String,
       required: false,
     },
