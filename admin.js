@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const adminSchema = new mongoose.Schema(
   {
     user_id: {
@@ -30,6 +29,12 @@ const adminSchema = new mongoose.Schema(
     password: {
       type: String,
       required: false,
+    },
+
+    role_id: {
+      type: ObjectId,
+      required: true,
+      ref: "Role",
     },
 
     image: {

@@ -14,6 +14,11 @@ const userSchema = new mongoose.Schema(
     darkmode: {
       type: Boolean,
     },
+    role_id: {
+      type: ObjectId,
+      required: false,
+      ref: "Role",
+    },
 
     tiptorider: [
       {
@@ -51,22 +56,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    addresses: [
-      {
-        _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
-        addressFullName: { type: String },
-        addressPhoneNumber: { type: String },
-        locality: { type: String },
-        country: { type: String },
-        addressPincode: { type: String },
-        locality: { type: String },
-        state: { type: String },
-        city: { type: String },
-        houseNo: { type: String },
-        roadName: { type: String },
-        select: { type: String },
-      },
-    ],
+   
     image: {
       type: String,
       required: false,

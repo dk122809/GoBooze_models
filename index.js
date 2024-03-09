@@ -14,12 +14,15 @@ const storeModel = require("./store");
 const productImageModel = require("./product_image");
 const itemImageModel = require("./item_image");
 const stockModel = require("./stock");
-const variantModel=require("./variant")
-const brandModel=require("./brands")
+const variantModel = require("./variant");
+const brandModel = require("./brands");
 const customerModal = require("./customers");
 const orderDelivery = require("./order_delivery");
 const orderProducts = require("./order_products");
 const orderStatus = require("./order_status");
+const roleModel = require("./role");
+const partnerModel = require("./partners");
+const storeDeliveryPartner = require("./store_delivery_partner");
 
 module.exports = {
   addressModel,
@@ -43,6 +46,8 @@ module.exports = {
   customerModal,
   orderStatus,
   orderDelivery,
-  orderProducts
-
+  orderProducts,
+  roleModel,
+  partnerModel,
+  storeDeliveryPartner,
 };
