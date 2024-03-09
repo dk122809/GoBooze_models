@@ -11,7 +11,7 @@ const OrderStatusSchema = new mongoose.Schema(
     },
     delivery_user: {
       type: ObjectId,
-      ref: "User", // for now we are using  user as the delivery person but it can be a different model in future
+      ref: "Partner", 
       required: true,
     },
     delivery_status: {
