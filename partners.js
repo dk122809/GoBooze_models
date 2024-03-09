@@ -33,6 +33,10 @@ const partnerSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    otp: {
+      type: String,
+      required: false,
+    },
     image: {
       type: String,
       required: false,
