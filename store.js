@@ -65,10 +65,10 @@ const adminSchema = new mongoose.Schema(
     //   type: String,
     //   required: false,
     // },
-    // email: {
-    //   type: String,
-    //   required: true,
-    // },
+    email: {
+      type: String,
+      required: true,
+    },
     // phone: {
     //   type: String,
     //   required: true,
@@ -77,10 +77,10 @@ const adminSchema = new mongoose.Schema(
     //   type: String,
     //   required: false,
     // },
-    // password: {
-    //   type: String,
-    //   required: false,
-    // },
+    password: {
+      type: String,
+      required: false,
+    },
     // image: {
     //   type: String,
     //   required: false,
@@ -107,19 +107,19 @@ const adminSchema = new mongoose.Schema(
     //   default: false,
     //   required: false,
     // },
-    // location: {
-    //   type: {
-    //     type: String,
-    //     enum: ["Point"],
-    //     default: "Point",
-    //     required: false,
-    //   },
-    //   coordinates: {
-    //     type: [Number, Number], // [<longitude>, <latitude> ]
-    //     required: false,
-    //     // index: '2dsphere'
-    //   },
-    // },
+    location: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        default: "Point",
+        required: false,
+      },
+      coordinates: {
+        type: [Number, Number], // [<longitude>, <latitude> ]
+        required: false,
+        // index: '2dsphere'
+      },
+    },
 
     // average_store_rating: {
     //   type: Number,

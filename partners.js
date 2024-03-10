@@ -13,7 +13,7 @@ const partnerSchema = new mongoose.Schema(
       ref: "Role",
     },
     store_id: {
-      type: ObjectId,
+      type: [ObjectId],
       required: false,
       ref: "Store",
     },
