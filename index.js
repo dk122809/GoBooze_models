@@ -23,6 +23,7 @@ const orderStatus = require("./order_status");
 const roleModel = require("./role");
 const partnerModel = require("./partners");
 const storeDeliveryPartner = require("./store_delivery_partner");
+const favoriteModel = require("./favorite");
 
 module.exports = {
   addressModel,
@@ -50,4 +51,5 @@ module.exports = {
   roleModel,
   partnerModel,
   storeDeliveryPartner,
+  favoriteModel
 };
