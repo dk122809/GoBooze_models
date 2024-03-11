@@ -68,6 +68,14 @@ const partnerSchema = new mongoose.Schema(
         // index: '2dsphere'
       },
     },
+    image: {
+      type: String,
+      required: false,
+    },
+    identityImages: {
+      type: Array,
+      required: false,
+    },
     status: {
       type: String,
       enum: ["active", "inactive"],
