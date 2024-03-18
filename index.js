@@ -1,6 +1,7 @@
 const addressModel = require("./address");
 const adminModel = require("./admin");
 const cartModel = require("./cart");
+const cartItemModel = require("./cart_item");
 const collectionModel = require("./category");
 const subCollectionModel = require("./sub_collection");
 const couponModel = require("./coupon");
@@ -51,5 +52,6 @@ module.exports = {
   roleModel,
   partnerModel,
   storeDeliveryPartner,
-  favoriteModel
+  favoriteModel,
+  cartItemModel
 };
