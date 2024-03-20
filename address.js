@@ -16,16 +16,16 @@ const addressSchema = new mongoose.Schema(
     coordinates: {
       lat: {
         type: Number,
-        required: false,
+        required: true,
       },
-      lag: {
+      lng: {
         type: Number,
-        required: false,
+        required: true,
       },
     },
     map_url: {
       type: String,
-      required: false,
+      required: true,
     },
     status: {
       type: String,
