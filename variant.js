@@ -36,13 +36,13 @@ const variantsModel = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["active", "inactive"],
-      default: "active",
+      enum: ['active', 'inactive'],
+      default: 'active',
       required: true,
     },
     products: {
       type: Schema.Types.ObjectId,
-      ref: "product",
+      ref: 'product',
       required: false,
     },
     isTopSellingProduct: {
@@ -52,14 +52,28 @@ const variantsModel = new mongoose.Schema(
     },
     addedBy: {
       type: Schema.Types.ObjectId,
-      ref: "Admin",
-        required: false,
-      },
-      updatedBy: {
-        type: Schema.Types.ObjectId,
-        ref: "Admin",
-        required: false,
-      },
+      ref: 'Admin',
+      required: false,
+    },
+    label: {
+      type: String,
+      enum: ['hot', 'bestseller','new','none'],
+      default: 'none',
+    },
+    vol: {
+      type: String,
+      required: false,
+    },
+    
+    alcohol_percentage: {
+      type: Number,
+      required: false,
+    },
+    updatedBy: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
+      required: false,
+    },
   },
   {
     // suppressReservedKeysWarning: true,

@@ -55,8 +55,22 @@ const adminSchema = new mongoose.Schema(
     type: Array,
     default: [],
   },
-
-
+    primary_zip_code: {
+      type: String,
+      required: false,
+    },
+    city: {
+      type: String,
+      required: false,
+    },
+    state:{
+      type: String,
+      required: false,
+    },
+    country: {
+      type: String,
+      required: false,
+    },
     // first_name: {
     //   type: String,
     //   required: false,
