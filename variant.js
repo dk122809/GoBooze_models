@@ -36,13 +36,13 @@ const variantsModel = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ['active', 'inactive'],
-      default: 'active',
+      enum: ["active", "inactive"],
+      default: "active",
       required: true,
     },
     products: {
       type: Schema.Types.ObjectId,
-      ref: 'product',
+      ref: "product",
       required: false,
     },
     isTopSellingProduct: {
@@ -52,27 +52,56 @@ const variantsModel = new mongoose.Schema(
     },
     addedBy: {
       type: Schema.Types.ObjectId,
-      ref: 'Admin',
+      ref: "Admin",
       required: false,
     },
     label: {
       type: String,
-      enum: ['hot', 'bestseller','new','none'],
-      default: 'none',
+      enum: ["hot", "bestseller", "new", "none"],
+      default: "none",
     },
     vol: {
       type: String,
       required: false,
     },
-    
+
     alcohol_percentage: {
       type: Number,
       required: false,
     },
     updatedBy: {
       type: Schema.Types.ObjectId,
-      ref: 'Admin',
+      ref: "Admin",
       required: false,
+    },
+    offers: [
+      {
+        quantity: {
+          type: Number,
+          required: false,
+          default: 1,
+        },
+        offerPrice: {
+          type: Number,
+          required: false,
+          default: 0,
+        },
+        offerType: {
+          type: String,
+          enum: ["percent", "dollar"],
+          default: "dollar",
+        },
+        isActive: {
+          type: Boolean,
+          required: false,
+          default: false,
+        },
+      },
+    ],
+    isOfferApplied: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   {
@@ -81,4 +110,4 @@ const variantsModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Variant", variantsModel,"variants");
+module.exports = mongoose.model("Variant", variantsModel, "variants");
