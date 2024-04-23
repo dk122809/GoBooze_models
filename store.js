@@ -4,57 +4,57 @@ const Schema = mongoose.Schema;
 
 const adminSchema = new mongoose.Schema(
   {
-    storeName:{
-      type:String,
-      required:true
+    storeName: {
+      type: String,
+      required: true
     },
     role_id: {
       type: ObjectId,
       required: true,
       ref: "Role",
     },
-    storeNumber:{
-      type:String,
-      required:false
+    storeNumber: {
+      type: String,
+      required: false
     },
-    storeManager:{
-      type:String,
-      required:true
+    storeManager: {
+      type: String,
+      required: true
     },
-    phone:{
-      type:String,
-      required:true
+    phone: {
+      type: String,
+      required: true
     },
-    storeAddress:{
-      type:String,
-      required:true
-    },    
-    storeImage:{
-      type:String,
-      required:false
+    storeAddress: {
+      type: String,
+      required: true
     },
-    addedBy:{
+    storeImage: {
+      type: String,
+      required: false
+    },
+    addedBy: {
       type: Schema.Types.ObjectId,
-      ref: "User",    
-  },
-  updatedBy:{
-    type: Schema.Types.ObjectId,
-    ref: "User",
-  },
-  status: {
-    type: String,
-    enum: ["active", "inactive"],
-    default: "active",
-    required: false,
-  },
-  // zipCode:{
-  //   type:String,
-  //   required:true
-  // },
-  zipCode: {
-    type: Array,
-    default: [],
-  },
+      ref: "User",
+    },
+    updatedBy: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+    status: {
+      type: String,
+      enum: ["active", "inactive"],
+      default: "active",
+      required: false,
+    },
+    // zipCode:{
+    //   type:String,
+    //   required:true
+    // },
+    zipCode: {
+      type: Array,
+      default: [],
+    },
     primary_zip_code: {
       type: String,
       required: false,
@@ -63,13 +63,19 @@ const adminSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    state:{
+    state: {
       type: String,
       required: false,
     },
     country: {
       type: String,
       required: false,
+    },
+    generic_store: {
+      type: Boolean,
+      required: false,
+      default: false
+
     },
     // first_name: {
     //   type: String,
