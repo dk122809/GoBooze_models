@@ -179,5 +179,6 @@ const adminSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+adminSchema.index({ location: "2dsphere" })
 
 module.exports = mongoose.model("Store", adminSchema, "store");

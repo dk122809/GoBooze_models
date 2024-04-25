@@ -41,7 +41,6 @@ const partnerSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-
     city: {
       type: String,
       required: false,
@@ -50,7 +49,7 @@ const partnerSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    is_active: {
+    is_active: {     ///Working Status
       type: Boolean,
       default: false,
       required: false,
@@ -76,7 +75,7 @@ const partnerSchema = new mongoose.Schema(
       type: Array,
       required: false,
     },
-    status: {
+    status: {        /// account status
       type: String,
       enum: ["active", "inactive"],
       default: "active",
@@ -87,5 +86,7 @@ const partnerSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+partnerSchema.index({ location: "2dsphere" })
 
 module.exports = mongoose.model("Partner", partnerSchema, "partners");
