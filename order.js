@@ -76,7 +76,10 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-
+    order_delivery_images: {
+      type: Array,
+      required: false,
+    },
     gobooze_rating: {
       type: Number,
       required: false,
