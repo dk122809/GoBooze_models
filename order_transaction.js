@@ -31,6 +31,7 @@ const OrderTransactionSchema = new mongoose.Schema(
     transaction_status: {
       type: String,
       required: false,
+      default:"pending"
     },
     transaction_data:{
 
