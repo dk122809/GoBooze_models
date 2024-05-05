@@ -28,6 +28,10 @@ const OrderTransactionSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    transaction_status: {
+      type: String,
+      required: false,
+    },
     transaction_data:{
 
     },

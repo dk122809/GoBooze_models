@@ -18,6 +18,10 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    transaction_status: {
+      type: String,
+      required: false,
+    },
     order_status: {
       type: String,
       enum: [
