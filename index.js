@@ -25,6 +25,7 @@ const roleModel = require("./role");
 const partnerModel = require("./partners");
 const storeDeliveryPartner = require("./store_delivery_partner");
 const favoriteModel = require("./favorite");
+const orderTransactionModel = require("./order_transaction");
 
 module.exports = {
   addressModel,
@@ -53,5 +54,6 @@ module.exports = {
   partnerModel,
   storeDeliveryPartner,
   favoriteModel,
-  cartItemModel
+  cartItemModel,
+  orderTransactionModel
 };
