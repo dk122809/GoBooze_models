@@ -30,7 +30,7 @@ const OrderTransactionSchema = new mongoose.Schema(
     },
     transaction_id: {
       type: String,
-      required: true,
+      required: false,
     },
     transaction_data:{
 
