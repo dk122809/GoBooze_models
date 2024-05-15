@@ -33,9 +33,20 @@ const OrderTransactionSchema = new mongoose.Schema(
       required: false,
       default:"pending"
     },
-    transaction_data:{
-
+    amount: {
+      type: Number,
+      required: false,
+      default: 0,
     },
+    no_of_items:{
+      type: Number,
+      required: false,
+      default: 0,
+    },
+    payment_Type:{
+      type: String,
+      required: false,
+    }
   },
   {
     timestamps: true,
