@@ -9,16 +9,12 @@ const searchHistorySchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    search_name: {
-      type: String,
-      required: true,
-    },
-    status: {
-      type: String,
-      enum: ["active", "inactive"],
-      default: "active",
-      required: true,
-    },
+    search_names: [
+      {
+        type: String,
+        required: true,
+      }
+    ]
   },
   {
     timestamps: true,
