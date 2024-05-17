@@ -64,7 +64,10 @@ const variantsModel = new mongoose.Schema(
       type: String,
       required: false,
     },
-
+    description: {
+      type: String,
+      required: false,
+    },
     alcohol_percentage: {
       type: Number,
       required: false,
