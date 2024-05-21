@@ -26,7 +26,7 @@ const orderSchema = new mongoose.Schema(
     order_status: {
       type: String,
       enum: [
-        "processing",
+        "pending",
         "accepted",
         "rejected",
         "on-the-way",
@@ -34,7 +34,7 @@ const orderSchema = new mongoose.Schema(
         "cancelled",
         "returned",
       ],
-      default: "processing",
+      default: "pending",
       required: true,
     },
     delivery_time: {
@@ -102,7 +102,10 @@ const orderSchema = new mongoose.Schema(
       ref: "Store",
       required: false,
     },
-
+    order_Variants: {
+      type: [{ type: Object }],
+      required: false,
+    },
     status: {
       type: String,
       enum: ["active", "inactive"],
