@@ -112,6 +112,15 @@ const orderSchema = new mongoose.Schema(
       default: "active",
       required: true,
     },
+    cancel_reason: {
+      type: String,
+      default: "",
+      required: false,
+    },
+    deliveryImages: {
+      type: [String],
+      required: false,
+    },
   },
   {
     timestamps: true,
