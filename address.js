@@ -3,7 +3,10 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const addressSchema = new mongoose.Schema(
   {
     user_id: { type: ObjectId, required: true },
-    addressFullName: { type: String, required: true },
+    addressFullName: { type: String, required: false },
+    first_name: { type:String, reqired:false },
+    last_name: { type:String,  required:false },
+    address: { type:String, required: false },
     addressPhoneNumber: { type: String, required: true },
     locality: { type: String, required: false },
     country: { type: String, required: false },
@@ -16,16 +19,16 @@ const addressSchema = new mongoose.Schema(
     coordinates: {
       lat: {
         type: Number,
-        required: true,
+        required: false,
       },
       lng: {
         type: Number,
-        required: true,
+        required: false,
       },
     },
     map_url: {
       type: String,
-      required: true,
+      required: false,
     },
     status: {
       type: String,
