@@ -8,7 +8,10 @@ const collectionSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
+    quantity: {
+      type: Number,
+      required: true,
+    },
     added_by: {
       type: ObjectId,
       ref: "Admin",
