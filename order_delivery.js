@@ -28,6 +28,11 @@ const OrderStatusSchema = new mongoose.Schema(
       ],
       default: "pending",
     },
+    store_id: {
+      type: ObjectId,
+      required: false,
+      ref: "Store",
+    },
     location: {
       lat: {
         type: Number,
