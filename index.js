@@ -27,6 +27,7 @@ const storeDeliveryPartner = require("./store_delivery_partner");
 const favoriteModel = require("./favorite");
 const orderTransactionModel = require("./order_transaction");
 const inquiryModel = require("./inquiry")
+const ContentManagementModel = require("./content_management")
 
 module.exports = {
   addressModel,
@@ -57,5 +58,6 @@ module.exports = {
   favoriteModel,
   cartItemModel,
   orderTransactionModel,
-  inquiryModel
+  inquiryModel,
+  ContentManagementModel
 };
