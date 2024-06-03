@@ -118,6 +118,10 @@ const orderSchema = new mongoose.Schema(
       type: [{ type: Object }],
       required: false,
     },
+    cartIds : {
+      type: [String],
+      required: false,
+    },
     status: {
       type: String,
       enum: ["active", "inactive"],
