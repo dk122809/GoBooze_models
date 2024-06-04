@@ -4,31 +4,50 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const couponSchema = new mongoose.Schema(
   {
-    coupon_name: {
+    coupan_name: {
       type: String,
       required: true,
+      uppercase: true
     },
-
-    coupon_discount: {
+    description: {
+      type: String,
+      default: '',
+    },
+    validFrom: {
+      type: Date,
+      required: true
+    },
+    validTill: {
+      type: Date,
+      required: true
+    },
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Admin',
+      required: true
+    },
+    coupan_value: {
       type: Number,
+      required: true
+    },
+    coupan_value_type: {
+      type: String,
       required: true,
+      default: "dollar",
+      enum: ['dollar', 'percent']
     },
-    added_by: {
-      type: ObjectId,
-      ref: "User",
-      required: true,
-    },
-    updated_by: {
-      type: ObjectId,
-      ref: "User",
-      required: false,
-    },
-
+    coupan_users: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    }],
     status: {
       type: String,
-      enum: ["active", "inactive"],
-      default: "active",
-      required: true,
+      default: 'active',
+      enum: ['active', 'expired']
+    },
+    isDeleted: {
+      type: Boolean,
+      default: false
     },
   },
   {
