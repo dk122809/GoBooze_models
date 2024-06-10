@@ -16,6 +16,10 @@ const redeemCouponSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    isCouponApplied : {
+      type: Boolean,
+      default: false,
+    },
     isUsedOn: {
       type: Date,
     },
