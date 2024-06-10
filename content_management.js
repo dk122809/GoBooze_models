@@ -12,7 +12,7 @@ const contentManagementSchema = new mongoose.Schema(
         banner_type: {
             type: String,
             required: false,
-            enum: ["landing_page_banner", "festival_banner", "subscribe_banner", "none"],
+            enum: ["landing_page_banner", "festival_banner", "subscribe_banner", "none","category_search_banner"],
         },
         title: {
             type: String,
