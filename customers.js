@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    newOtp : {
+      type: String,
+      required : false
+    },
     email: {
       type: String,
     },
@@ -45,6 +49,10 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     phoneNumber: {
+      type: String,
+      required: false,
+    },
+    newPhoneNumber: {
       type: String,
       required: false,
     },

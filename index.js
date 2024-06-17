@@ -29,6 +29,7 @@ const orderTransactionModel = require("./order_transaction");
 const inquiryModel = require("./inquiry")
 const ContentManagementModel = require("./content_management")
 const redeemCouponModel = require("./redeem_coupon")
+const subscriptionModel = require("./subscription");
 
 module.exports = {
   addressModel,
@@ -61,5 +62,6 @@ module.exports = {
   orderTransactionModel,
   inquiryModel,
   ContentManagementModel,
-  redeemCouponModel
+  redeemCouponModel,
+  subscriptionModel
 };
