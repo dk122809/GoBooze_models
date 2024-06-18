@@ -20,6 +20,10 @@ const redeemCouponSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    addressPincode: { 
+      type: String, 
+      required: false 
+    },
     isUsedOn: {
       type: Date,
     },
