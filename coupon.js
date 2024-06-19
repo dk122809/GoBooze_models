@@ -58,6 +58,11 @@ const couponSchema = new mongoose.Schema(
       type: Number,
       required: false,
       default:0
+    },
+    purchase_requirement :{
+      type: String,
+      default: 'no_minimum_requirements',
+      enum: ["no_minimum_requirements", "minimum_purchase_amount", "minimum_quantity_items"]
     }
   },
   {
