@@ -22,6 +22,10 @@ const contentManagementSchema = new mongoose.Schema(
             type: String,
             required: false,
         },
+        images: {
+            type: Array,
+            required: false,
+        },
         theme_type: {
             type: String,
             required: false,
