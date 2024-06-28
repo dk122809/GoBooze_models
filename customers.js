@@ -8,9 +8,9 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    newOtp : {
+    newOtp: {
       type: String,
-      required : false
+      required: false
     },
     email: {
       type: String,
@@ -64,7 +64,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-   
+
     image: {
       type: String,
       required: false,
@@ -276,7 +276,16 @@ const userSchema = new mongoose.Schema(
       default: "active",
       required: false,
     },
-
+    fbToken: {
+      key: {
+        type: String,
+        required: false,
+      },
+      enabled: {
+        type: Boolean,
+        required: false,
+      },
+    },
     sequence_no: {
       type: String,
       required: false,
