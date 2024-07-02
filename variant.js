@@ -1,5 +1,19 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const ObjectId = mongoose.Schema.Types.ObjectId;
+
+const storePricingSchema = new Schema({
+  storeId: {
+    type: ObjectId,
+    ref: "Store",
+    required: true,
+  },
+  sellingPrice: { type: Number, required: true },
+  discount: { type: Number, required: true },
+  finalSellingPrice: { type: Number, required: true }
+});
+
+
 const variantsModel = new mongoose.Schema(
   {
     variantName: {
@@ -14,10 +28,10 @@ const variantsModel = new mongoose.Schema(
       type: String,
       required: false,
     },
-    sellingPrice: {
-      type: Number,
-      required: true,
-    },
+    // sellingPrice: {
+    //   type: Number,
+    //   required: true,
+    // },
     purchasePrice: {
       type: Number,
       required: true,
@@ -26,14 +40,15 @@ const variantsModel = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    discount: {
-      type: Number,
-      required: true,
-    },
-    finalSellingPrice: {
-      type: Number,
-      required: true,
-    },
+    // discount: {
+    //   type: Number,
+    //   required: true,
+    // },
+    // finalSellingPrice: {
+    //   type: Number,
+    //   required: true,
+    // },
+    storePricing: [storePricingSchema],
     status: {
       type: String,
       enum: ["active", "inactive"],
