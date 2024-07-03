@@ -280,10 +280,12 @@ const userSchema = new mongoose.Schema(
       key: {
         type: String,
         required: false,
+        default: "",
       },
       enabled: {
         type: Boolean,
         required: false,
+        default: false,
       },
     },
     sequence_no: {
