@@ -27,14 +27,17 @@ const inventorySchema = new mongoose.Schema(
     number_of_products: {
       type: Number,
       default: 0,
-      required:true
+      required: true
     },
     minimum_qty: {
       type: Number,
       default: 0,
-      required:true
+      required: true
     },
-  },
+    reason_for_inventory: {
+      type: String,
+      required: true
+    },
   {
     timestamps: true,
   }
