@@ -169,4 +169,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
+productSchema.index({ productName: 1, category: 1 ,subCategory:1, brand:1,variants:1 }, { unique: true });
+
 module.exports = mongoose.model("Product", productSchema,"products");
