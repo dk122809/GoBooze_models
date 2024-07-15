@@ -269,7 +269,11 @@ const userSchema = new mongoose.Schema(
       type: Number,
       required: false,
     },
-
+    recent_store: {
+      type: ObjectId,
+      ref: "Store",
+      required: false,
+    },
     status: {
       type: String,
       enum: ["active", "inactive"],
