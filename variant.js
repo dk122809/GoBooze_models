@@ -28,10 +28,10 @@ const variantsModel = new mongoose.Schema(
       type: String,
       required: false,
     },
-    // sellingPrice: {
-    //   type: Number,
-    //   required: true,
-    // },
+    sellingPrice: {
+      type: Number,
+      required: false,
+    },
     purchasePrice: {
       type: Number,
       required: true,
@@ -40,14 +40,14 @@ const variantsModel = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    // discount: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // finalSellingPrice: {
-    //   type: Number,
-    //   required: true,
-    // },
+    discount: {
+      type: Number,
+      required: false,
+    },
+    finalSellingPrice: {
+      type: Number,
+      required: false,
+    },
     storePricing: [storePricingSchema],
     status: {
       type: String,
