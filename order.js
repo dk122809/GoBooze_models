@@ -83,6 +83,21 @@ const orderSchema = new mongoose.Schema(
       ref: "Coupon",
       required: false,
     },
+    isCouponUsed: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    isCouponApplied: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    couponAmount: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
     payment_method: {
       type: ObjectId,
       ref: "PaymentMethod",
