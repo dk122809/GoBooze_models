@@ -13,6 +13,7 @@ const OrderStatusSchema = new mongoose.Schema(
       type: ObjectId,
       ref: "Partner", 
       required: true,
+      default: null,
     },
     delivery_status: {
       type: String,
