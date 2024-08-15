@@ -12,7 +12,7 @@ const OrderStatusSchema = new mongoose.Schema(
     delivery_user: {
       type: ObjectId,
       ref: "Partner", 
-      required: true,
+      required: false,
       default: null,
     },
     delivery_status: {
