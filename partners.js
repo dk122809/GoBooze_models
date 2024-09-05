@@ -86,6 +86,18 @@ const partnerSchema = new mongoose.Schema(
       default: "active",
       required: true,
     },
+    fbToken: {
+      key: {
+        type: String,
+        required: false,
+        default: "",
+      },
+      enabled: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
+    },
   },
   {
     timestamps: true,
