@@ -56,7 +56,7 @@ const variantsModel = new mongoose.Schema(
     },
     products: {
       type: Schema.Types.ObjectId,
-      ref: "product",
+      ref: "Product",
       required: false,
     },
     isTopSellingProduct: {
@@ -127,4 +127,4 @@ const variantsModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Product", variantsModel, "variants");
+module.exports = mongoose.model("Variant", variantsModel, "variants");
