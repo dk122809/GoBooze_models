@@ -10,9 +10,8 @@ const storePricingSchema = new Schema({
   },
   sellingPrice: { type: Number, required: true },
   discount: { type: Number, required: true },
-  finalSellingPrice: { type: Number, required: true }
+  finalSellingPrice: { type: Number, required: true },
 });
-
 
 const variantsModel = new mongoose.Schema(
   {
@@ -128,4 +127,4 @@ const variantsModel = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Variant", variantsModel, "variants");
+module.exports = mongoose.model("Product", variantsModel, "variants");
