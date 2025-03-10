@@ -22,7 +22,7 @@ const variantsModel = new mongoose.Schema(
     slug: {
     type: String,
     unique: true, 
-  },
+    },
     variantCode: {
       type: String,
       required: false,
@@ -83,6 +83,10 @@ const variantsModel = new mongoose.Schema(
       required: false,
     },
     description: {
+      type: String,
+      required: false,
+    },
+    metaDescription: {
       type: String,
       required: false,
     },
